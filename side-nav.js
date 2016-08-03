@@ -33,8 +33,6 @@ class SideNav {
     this.onTransitionEnd = this.onTransitionEnd.bind(this);
     this.update = this.update.bind(this);
 
-    this.sideNavEl.inert = true;
-
     this.startX = 0;
     this.currentX = 0;
     this.touchingSideNav = false;
@@ -127,14 +125,12 @@ class SideNav {
   }
 
   showSideNav () {
-    this.sideNavEl.inert = false;
     this.sideNavEl.classList.add('side-nav--animatable');
     this.sideNavEl.classList.add('side-nav--visible');
     this.sideNavEl.addEventListener('transitionend', this.onTransitionEnd);
   }
 
   hideSideNav () {
-    this.sideNavEl.inert = true;
     this.sideNavEl.classList.add('side-nav--animatable');
     this.sideNavEl.classList.remove('side-nav--visible');
     this.sideNavEl.addEventListener('transitionend', this.onTransitionEnd);
