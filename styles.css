@@ -30,7 +30,7 @@ html, body {
   width: 100%;
   height: 56px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  background: #333;
+  background: #EA2663;
   color: #FFF;
   display: flex;
   flex-direction: row;
@@ -56,10 +56,12 @@ html, body {
   height: 100%;
   overflow: hidden;
   pointer-events: none;
+  visibility: inert;
 }
 
 .side-nav--visible {
   pointer-events: auto;
+  visibility: visible;
 }
 
 .side-nav::before {
@@ -151,4 +153,8 @@ html, body {
 
 main {
   padding: 16px;
+}
+
+.inert {
+  visibility: inert !important;
 }
